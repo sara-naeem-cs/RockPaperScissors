@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+}
+.header {
+    padding: 10px;
+    text-align: center;
+    background: #48935b;
+    color: white;
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+
+.score-board{
+  color:white;
+}
+
+#user-label {
+  position: absolute;
+  top:50px;
+  left:-25; 
+  /*We want it to be the parent's top left we do position other than static or inherent*/
+  /*parent is score board*/
+}
+
+/*Do the score board later*/
+
+/*Do the buttons styling*/ 
+/*Have hover functionality for buttons*/
