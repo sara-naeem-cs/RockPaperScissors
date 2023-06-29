@@ -3,12 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <title>Rock Paper Scissors</title>
-
-
-
+    <link rel="stylesheet" type="text/css" href="index.css" />
 </head>
 <body>
     <script src="index.js"></script>
+    <div class="header">
+        <h1>Rock Paper Scissors</h1>
+        <div></div>
+    </div>
 
+    <div class="score-board">
+        <br>
+        <br>
+        <br>
+        <div id="user-label" class="badge">User</div>
+        <span id="user-score">0</span>
+        <br>
+
+        <div id="computer-label" class="badge">Computer</div>
+        <span id="computer-score">0</span>
+
+        <div id="round-number" class="badge">Rounds</div>
+        <span id="rounds-count">0</span>
+
+    </div>
+
+
+    <div class="result">
+        <p></p> <!--Paper covers rock. You win!-->
+    </div>
+
+    <div class="choices">
+        <div class="choice" id="rock">
+            <img src="images/rock.png" alt="">
+        </div>
+        <div class="choice" id="paper">
+            <img src="images/paper.png" alt="">
+        </div>
+        <div class="choice" id="scissors">
+            <img src="images/scissors.png" alt="">
+        </div>
+    </div>
+    
+    <p id="action-message">Make your move</p>
+
+    <script src="index.js" charset="utf-8"></script>
 </body>
 </html>
+
+
+
+<!--Continue video from 40:00 mark-->
+<!--https://www.youtube.com/watch?v=jaVNP3nIAv0&ab_channel=freeCodeCamp.org -->
