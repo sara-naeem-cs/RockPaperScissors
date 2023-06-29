@@ -17,6 +17,10 @@ body {
     font-family: 'Roboto', sans-serif;
   }
   
+.result { 
+  color: white;
+  }
+
 
 .score-board{
   color:white;

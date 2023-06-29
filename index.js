@@ -91,14 +91,8 @@ document.addEventListener('DOMContentLoaded', () => {
     */
 
     function getComputerChoice(){
-        //We are setting up random number generator for three number choices:
-        //const MAX = 3;
-        //const MIN = 1;
-
-        //var random_num = Math.round(Math.random() * (MAX - MIN + 1)) + MIN;
         var random_num = Math.floor(Math.random() * 3);
         var computerChoice;
-
         if (random_num == 1){
             computerChoice = "rock";
         }else if (random_num == 2){
@@ -109,15 +103,51 @@ document.addEventListener('DOMContentLoaded', () => {
         return computerChoice;
     }
 
+    function computerWins(player, computer){
+        if (player == "rock" && computer == "paper"){
+            return true;
+        } else if (player == "paper" && computer == "scissors"){
+            return true;
+        } else if (player == "scissors" && computer == "rock"){
+            return true;
+        } else{
+            return false;
+        }
+    }
 
     function game(userChoice){
         computerScore_span.attribute = computerScore_span.attribute +1;
         const ComputerChoice = getComputerChoice();
-        console.log("User choice " + userChoice);
-        console.log("Computer Choice " + ComputerChoice);
+        //console.log("User choice " + userChoice);
+        //console.log("Computer Choice " + getComputerChoice());
 
-        //HTML:  https://youtu.be/jaVNP3nIAv0?t=2803 46:43
+        if (userChoice == ComputerChoice){
+            //WE need to make sure score doesn't change
+            //give message that says draw
+            console.log("Draw!")
+        }
+        else if(computerWins(userChoice, getComputerChoice()) == true){
+            //Update the computer's score
+            computerScore++;
+            console.log("comp win")
+
+
+        }else{
+            //the user won so update user's score
+            userScore++;
+            console.log("user win")
+
+        }
+
+        computerScore_span.innerHTML = computerScore
+        userScore_span.innerHTML = userScore
+        result_div.innerHTML = `Comp played ${ComputerChoice} and user played ${userChoice}`;
+
     }
+
+
+
+
 
 
     //game("r")
